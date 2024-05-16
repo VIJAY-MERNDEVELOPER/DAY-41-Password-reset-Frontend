@@ -11,7 +11,11 @@ function Forgot() {
         style={{ height: "80vh" }}
       >
         <div className="col-6">
-          <form onSubmit={(e) => sendResetLink(e, user)}>
+          <form
+            onSubmit={(e) => {
+              sendResetLink(e, user);
+            }}
+          >
             <div className="mb-3">
               <label htmlFor="email" className="form-label">
                 Email address

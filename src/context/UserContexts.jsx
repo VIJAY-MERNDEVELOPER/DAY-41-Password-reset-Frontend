@@ -74,7 +74,7 @@ const UserContextProvider = ({ children }) => {
     e.preventDefault();
     try {
       const { username, email, password } = user;
-      console.log(email);
+
       if (!email) {
         toast.error("Enter user email");
       }
@@ -82,6 +82,7 @@ const UserContextProvider = ({ children }) => {
       const res = await axios.post("/user/sendlink", { email });
       if (res.status === 200) {
         toast.success(res.data.message);
+
         return;
       }
       toast.error(res.data.message);
@@ -104,7 +105,6 @@ const UserContextProvider = ({ children }) => {
       }
       toast.error(res.data.message);
     } catch (error) {
-      console.log(error.response.data.message);
       toast.error(error.response.data.message);
     }
   };

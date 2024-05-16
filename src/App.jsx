@@ -10,7 +10,10 @@ import { Toaster } from "react-hot-toast";
 import Home from "./components/Home";
 
 function App() {
-  axios.defaults.baseURL = "http://localhost:3001/api";
+  axios.defaults.baseURL =
+    "https://github-com-vijay-merndeveloper-password.onrender.com/api";
+  // "http://localhost:3001/api";
+  // "https://github-com-vijay-merndeveloper-password.onrender.com/api";
   return (
     <>
       {" "}
